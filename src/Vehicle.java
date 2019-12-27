@@ -1,8 +1,8 @@
 public class Vehicle {
-    String name;
-    int position;
-    Road currentRoad;
-    public Vehicle() {
+    String name; // name of vehicle
+    int position; // position of vehicle on current road
+    Road currentRoad; // vehicle current road
+    public Vehicle() { //default constructor
     }
 
     public Vehicle(String name, int position, Road currentRoad) {
@@ -13,5 +13,5 @@ public class Vehicle {
 
     public void move(){
         this.position+=1;
-    }
+    } // this method will make vehicle move on road
 }
