@@ -1,11 +1,11 @@
 public class Road {
-    Object[]object;
-    String name;
-    int length;
-    Vehicle vehicle=new Vehicle();
-    TrafficLight trafficLight=new TrafficLight();
-    Road connectedRoad;
-    boolean reached=false;
+    Object[]object; // this array will keep all the objects on road like cars and traffic light
+    String name; //name of the road
+    int length; // length of the object
+    Vehicle vehicle=new Vehicle(); // vehicle object to store it in object
+    TrafficLight trafficLight=new TrafficLight(); // traffic light object to store it in object
+    Road connectedRoad; // the connected roads of this current road
+    boolean reached=false; // if the vehicle reach the end of the road
 
     public Road(String name,int length,Vehicle vehicle, Road connectedRoad,TrafficLight trafficLight) {
         this.object=new Object[length];
@@ -17,7 +17,7 @@ public class Road {
         object[0]=vehicle;
         object[this.length-1]=trafficLight;
     }
-    public void update(Vehicle vehicle)
+    public void update(Vehicle vehicle) // this method will update vehicles positions in object array
     {
         if(vehicle.position<this.length) {
             object[vehicle.position-1]=null;
